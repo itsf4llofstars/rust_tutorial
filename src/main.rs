@@ -16,13 +16,12 @@ use rand::Rng;
 
 fn main() {
     // mathc
-    let age2 = 50;
+    let my_age = 18;
+    let voting_age = 18;
 
-    // NOTE: The use of commas and semi-colons
-    match age2 {
-        1..=18 => println!("Important Birthday"),
-        21 | 50 => println!("Important Birthday"),
-        65..=i32::MAX => println!("Important Birthday"),
-        _ => println!("Not an Important Birthday"),
-    };
+    match my_age.cmp(&voting_age){
+        Ordering::Less => println!("Can't Vote");
+        Ordering::Greater => println!("Can Vote");
+        Ordering::Equal => println!("You gained the right to vote");
+    }
 }
