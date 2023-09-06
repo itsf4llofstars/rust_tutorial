@@ -15,7 +15,17 @@ use rand::Rng;
 
 
 fn main() {
-    // random numbers
-    let random_num = rand::thread_rng().gen_range(1..101); // non-inclusive
-    println!("Random: {}", random_num);
+    // Conditionals
+    let age = 50;
+
+    if (age >= 1) && (age <=18) {
+        println!("Important Birthday");
+    } else if (age == 21) || (age == 50) {
+        println!("Important Birthday");
+    } else if (age >= 65) {
+        println!("Important Birthday");
+    } else {
+        println!("Not Important Birthday");
+    }
+
 }
