@@ -15,7 +15,13 @@ use rand::Rng;
 
 
 fn main() {
-    // random numbers
-    let random_num = rand::thread_rng().gen_range(1..101); // non-inclusive
-    println!("Random: {}", random_num);
+    // mathc
+    let my_age = 18;
+    let voting_age = 18;
+
+    match my_age.cmp(&voting_age){
+        Ordering::Less => println!("Can't Vote");
+        Ordering::Greater => println!("Can Vote");
+        Ordering::Equal => println!("You gained the right to vote");
+    }
 }
