@@ -15,16 +15,14 @@ use rand::Rng;
 
 
 fn main() {
-    // ternary conditional
-    let mut my_age = 50;
+    // mathc
+    let age2 = 50;
 
-    // no semi-colon needed for the return statements
-    // semi-colon needed at last curly brace
-    let can_vote = if my_age >= 18 {
-        true
-    } else {
-        false
+    // NOTE: The use of commas and semi-colons
+    match age2 {
+        1..=18 => println!("Important Birthday"),
+        21 | 50 => println!("Important Birthday"),
+        65..=i32::MAX => println!("Important Birthday"),
+        _ => println!("Not an Important Birthday"),
     };
-
-    println!("Can Vot: {}", can_vote);
 }
