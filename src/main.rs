@@ -15,26 +15,7 @@ use rand::Rng;
 
 
 fn main() {
-    // floating point precision
-
-    let num_1: f32 = 1.111111111111111; // 15 ones
-    println!("f32: {}", num_1 + 0.111111111111111);
-
-    let num_2: f64 = 1.111111111111111; // 15 ones
-    println!("f64: {}", num_2 + 0.111111111111111);
-
-    // math operators
-    let num_3: u32 = 50;
-    let num_4: u32 = 4;
-    println!("50 + 4 = {}", num_3 + num_4);
-    println!("50 - 4 = {}", num_3 - num_4);
-    println!("50 * 4 = {}", num_3 * num_4);
-    println!("50 / 4 = {}", num_3 / num_4);
-    println!("50 % 4 = {}", num_3 % num_4);
-
-    // increment
-    let mut inc_num: u32 = 100;
-    println!("inc_num = {}", inc_num);
-    inc_num += 1;
-    println!("inc_num = {}", inc_num);
+    // random numbers
+    let random_num = rand::thread_rng().gen_range(1..101); // non-inclusive
+    println!("Random: {}", random_num);
 }
