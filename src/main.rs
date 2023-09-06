@@ -14,11 +14,12 @@ use rand::Rng;
  
 
 fn main() {
-    println!("What is your name?");
-    let mut name = String::new(); // mutable string var
-    let greeting = "Nice to meet you"; // string var
-    io::stdin().read_line(&mut name) // get input from user
-        .expect("Didn't Receive Input");
+    const ONE_MIL: u32 = 1_000_000;
+    const PI: f32 = 3.14159;
+    let age = "47";
+    let mut age: u32 = age.trim().parse() // shadowing age: &str
+        .expect("Age wasn't assigned an number");
+    age = age + 1;
 
-    println!("Hello {}! {}", name.trim_end(), greeting); // print result
+    println!("I'm {} and I want ${}", age, ONE_MIL);
 }
